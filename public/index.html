@@ -5,6 +5,7 @@
     <title>RoboDragons FTC</title>
 
     <link href="css/bootstrap-std.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -18,13 +19,16 @@
     } catch (e) {
     }</script>
 
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
     <style>
-        .rotate-image-90 {
-            -webkit-transform: rotate(90deg);
-            -moz-transform: rotate(90deg);
-            -ms-transform: rotate(90deg);
-            -o-transform: rotate(90deg);
-            transform: rotate(90deg);
+        body {
+            min-height: 75rem;
+            padding-top: 4.5rem;
         }
 
         .card-glow {
@@ -39,12 +43,6 @@
         .rf-font-900 {
             font-family: "factoria";
             font-weight: 900;
-            font-style: normal;
-        }
-
-        .rf-font-700 {
-            font-family: "factoria";
-            font-weight: 700;
             font-style: normal;
         }
 
@@ -70,13 +68,63 @@
 </head>
 <body>
 
+<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #36454F;">
+    <a class="navbar-brand rf-font-600" href="#">
+        <img src="img/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        RoboDragons FTC
+    </a>
+    <ul class="navbar-nav mr-auto rf-font-400">
+        <li class="nav-item">
+            <a class="nav-link" href="#ftc">FTC</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#team">Team Members</a>
+        </li>
+    </ul>
+</nav>
+
 <div class="container">
-    <div class="jumbotron" style="background-color: #B71C1C; color: #FFF;">
-        <h1 class="display-3 rf-font-900">RoboDragons FTC</h1>
+    <div class="jumbotron" style="background-color: #B71C1C; color: #FFFFFF;">
+        <h1 class="display-2 rf-font-900">RoboDragons FTC</h1>
         <p class="lead rf-font-400">An aspiring FIRST Tech Challenge team based in Gainesville, FL</p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a role="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Youtube"
+               href="https://www.youtube.com/channel/UCq_QP9WOarg7A8yT1FGIL4A"><span
+                    class="fa fa-2x fa-youtube-play"></span></a>
+            <a role="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Photos"
+               href="https://goo.gl/photos/p7QKPxMzBkENkSDm6"><span class="fa fa-2x fa-photo"></span></a>
+            <a role="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Facebook"
+               href="#"><span class="fa fa-2x fa-facebook-square"></span></a>
+            <a role="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Twitter"
+               href="#"><span class="fa fa-2x fa-twitter-square"></span></a>
+            <a role="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Google+"
+               href="#"><span class="fa fa-2x fa-google-plus"></span></a>
+            <a role="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Discord"
+               href="#"><span class="fa fa-2x fa-comments-o"></span></a>
+            <a role="button" class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="E-Mail"
+               href="mailto:robodragons.ftc.team@gmail.com"><span class="fa fa-2x fa-envelope-o"></span></a>
+        </div>
     </div>
 
-    <div>
+    <div id="ftc">
+        <h2>FIRST Tech Challenge</h2>
+        <br>
+        <div class="row justify-content-center">
+            <iframe class="align-content-center" width="853" height="480"
+                    src="https://www.youtube.com/embed/igR409sJly0?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br>
+        <blockquote class="blockquote text-center">
+            <p class="mb-0">What is FIRST Tech Challenge?<br>
+                It’s way more than building robots. FIRST Tech Challenge teams (10+ members, grades 7-12) are
+                challenged to design, build, program, and operate robots to compete in a head-to-head challenge in
+                an alliance format.</p>
+            <footer class="blockquote-footer"><a href="https://www.firstinspires.org/robotics/ftc"><cite
+                    title="Source Title">FTC Website</cite></a></footer>
+        </blockquote>
+    </div>
+    <br><br>
+    <div id="team">
         <h2>Team Members</h2>
         <br>
         <div class="row mb-5">
@@ -87,7 +135,8 @@
                         <h4 class="card-title rf-font-600">Zach Hilman</h4>
                         <h6 class="card-subtitle mb-2 text-muted rf-font-500">Team Captain</h6>
                         <p class="card-text">Hello, My name is Zach and this is my second year with FTC. I enjoy
-                            competitive mathematics and programming in my free time. I placed 3rd in math nationals and
+                            competitive mathematics and programming in my free time. I placed 3rd in math nationals
+                            and
                             have been programming since 4th grade.</p>
                     </div>
                 </div>
@@ -98,51 +147,18 @@
                     <img class="card-img-top" src="img/benji.jpg" alt="Image">
                     <div class="card-body">
                         <h4 class="card-title rf-font-600">Benjamin Gao</h4>
-                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Programming/Assistant Team Captain</h6>
-                        <p class="card-text">My name is Benjamin and I'm am a junior in high school. I got interested in
+                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Programming/Assistant Team
+                            Captain</h6>
+                        <p class="card-text">My name is Benjamin and I'm am a junior in high school. I got
+                            interested in
                             robotics when I was in 6th grade, and I have loved it ever since. Last year was my first
-                            year participating in FIRST, and it was a blast. I'm on the math team, and I play tennis,
+                            year participating in FIRST, and it was a blast. I'm on the math team, and I play
+                            tennis,
                             piano, and guitar.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card card-glow">
-                    <img class="card-img-top" src="img/tyler.jpg" alt="Image">
-                    <div class="card-body">
-                        <h4 class="card-title rf-font-600">Tyler Wycoff</h4>
-                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Lieutenant</h6>
-                        <p class="card-text">Placeholder text.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row mb-5">
-            <div class="col-sm-4">
-                <div class="card card-glow">
-                    <img class="card-img-top" src="img/buffy.jpg" alt="Image">
-                    <div class="card-body">
-                        <h4 class="card-title rf-font-600">David "Buffy" Buffkin</h4>
-                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Programming</h6>
-                        <p class="card-text">My name is David Buffkin. I'm a junior in high school and I rock climbed
-                            and played water polo for three years. I'm on the math team. My friends call me Big Buff and
-                            I like Rick and Morty.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-4">
-                <div class="card card-glow">
-                    <img class="card-img-top" src="img/eric.jpg" alt="Image">
-                    <div class="card-body">
-                        <h4 class="card-title rf-font-600">Eric Chen</h4>
-                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Programming</h6>
-                        <p class="card-text">Hi, my name is Eric Chen. I'm a 10th grader going to Buchholz and I'm on
-                            the math team. I play tennis and piano. Also, I'm an avid video gamer.</p>
-                    </div>
-                </div>
-            </div>
             <div class="col-sm-4">
                 <div class="card card-glow">
                     <img class="card-img-top" src="img/bahar.jpg" alt="Image">
@@ -160,11 +176,53 @@
         <div class="row mb-5">
             <div class="col-sm-4">
                 <div class="card card-glow">
+                    <img class="card-img-top" src="img/tyler.jpg" alt="Image">
+                    <div class="card-body">
+                        <h4 class="card-title rf-font-600">Tyler Wycoff</h4>
+                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Lieutenant</h6>
+                        <p class="card-text">Placeholder text.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card card-glow">
                     <img class="card-img-top" src="img/jack.jpg" alt="Image">
                     <div class="card-body">
                         <h4 class="card-title rf-font-600">Jack Hudson</h4>
                         <h6 class="card-subtitle mb-2 text-muted rf-font-500">Business Captain</h6>
                         <p class="card-text">Placeholder text.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-sm-4">
+                <div class="card card-glow">
+                    <img class="card-img-top" src="img/buffy.jpg" alt="Image">
+                    <div class="card-body">
+                        <h4 class="card-title rf-font-600">David "Buffy" Buffkin</h4>
+                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Programming</h6>
+                        <p class="card-text">My name is David Buffkin. I'm a junior in high school and I rock
+                            climbed
+                            and played water polo for three years. I'm on the math team. My friends call me Big Buff
+                            and
+                            I like Rick and Morty.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card card-glow">
+                    <img class="card-img-top" src="img/eric.jpg" alt="Image">
+                    <div class="card-body">
+                        <h4 class="card-title rf-font-600">Eric Chen</h4>
+                        <h6 class="card-subtitle mb-2 text-muted rf-font-500">Programming</h6>
+                        <p class="card-text">Hi, my name is Eric Chen. I'm a 10th grader going to Buchholz and I'm
+                            on
+                            the math team. I play tennis and piano. Also, I'm an avid video gamer.</p>
                     </div>
                 </div>
             </div>
@@ -175,12 +233,16 @@
                     <div class="card-body">
                         <h4 class="card-title rf-font-600">Oliver Scott</h4>
                         <h6 class="card-subtitle mb-2 text-muted rf-font-500">Public Relations</h6>
-                        <p class="card-text">Hello, my name is Oliver and this is my first year. I go to Buchholz high
+                        <p class="card-text">Hello, my name is Oliver and this is my first year. I go to Buchholz
+                            high
                             school. I have over 1000 hours in Counter Strike: Global Offensive.</p>
                     </div>
                 </div>
 
             </div>
+        </div>
+
+        <div class="row mb-5">
             <div class="col-sm-4">
                 <div class="card card-glow">
                     <img class="card-img-top" src="img/jonathan.jpg" alt="Image">
@@ -193,6 +255,21 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="row justify-content-center mb-3 rf-font-600 text-muted">
+        <footer>&copy; 2017-18 RoboDragons FTC | Designed by Zach Hilman | Made with Bootstrap v4.</footer>
+    </div>
+    <!--div id="media">
+        <h2>Media</h2>
+        <br>
+        <div class="row justify-content-center">
+            <h4><a href="https://www.youtube.com/channel/UCq_QP9WOarg7A8yT1FGIL4A">Youtube</a></h4>
+            </div><div class="row justify-content-center">
+        <iframe width="853" height="480"
+                src="https://www.youtube.com/embed/videoseries?list=PLuFZaeVdM_QzjVlhQ046bZddvoB1kiptq"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div-->
 </div>
 
 </body>
